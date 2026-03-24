@@ -9,8 +9,6 @@ class MyRobot(BaseAgent):
 
     urdf_path = r"unitree_ros\robots\g1_with_brainco_hand\g1_29dof_mode_15_brainco_hand_me_setup.urdf" #2 brainco
 
-    # Если робот должен стоять на месте
     fix_root_link = True
 
-    # ВАЖНО: правильное имя параметра
     enable_self_collisions = True

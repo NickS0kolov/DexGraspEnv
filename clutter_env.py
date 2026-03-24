@@ -129,7 +129,7 @@ class TabletopClutterEnv(BaseEnv):
         eps_idxs = self._batched_episode_rng.randint(0, len(self._episodes))
 
         self.selectable_target_objects: list[list[Actor]] = []
-        """for each sub-scene, a list of objects that can be selected as targets"""
+
         all_objects = []
 
         for i, eps_idx in enumerate(eps_idxs):
@@ -163,7 +163,6 @@ class TabletopClutterEnv(BaseEnv):
         self._sample_target_objects()
     
     def _sample_target_objects(self):
-        # note this samples new target objects for every sub-scene
         target_objects = []
         for i in range(self.num_envs):
             selected_obj_idxs = torch.randint(low=0, high=99999, size=(self.num_envs,))

@@ -2,7 +2,6 @@ import gymnasium as gym
 import torch
 import mani_skill.envs 
 
-# Импорт твоей среды
 from clutter_env import TabletopClutterEnv
 from my_robot import MyRobot
 import numpy as np
